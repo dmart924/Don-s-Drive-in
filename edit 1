@@ -1,2 +1,45 @@
-# Don's Drive In
-# 
+#Don's Drive-in and Dine
+#Daniel Martin 
+#SDEV 140 project
+ 
+from tkinter import *               #import tkinter
+
+
+class MainWindow:
+    def __init__(self):
+        def create():
+            Toplevel()
+
+        self.app = Tk()
+        self.app.title("Don's Drive-in and Dine")
+        self.app.geometry("500x500")
+        
+        self.label = Label(self.app, text="Welcome To Don's!")
+        self.label.place(x=95, y=40)
+
+        self.movieBtn = Button(self.app, text = "Movies!", command = create,
+                                pady = 5, padx = 30)
+        self.movieBtn.place(x = 100, y = 100)                   #create movie button
+
+        self.foodBtn = Button(self.app, text = "Food!", command = create,
+                                pady = 5, padx = 30)            #create food button
+        self.foodBtn.place(x = 100, y = 150) 
+
+        self.drinkBtn = Button(self.app, text = "Drink!", command = create,
+                                pady = 5, padx = 30)            #create drink button
+        self.drinkBtn.place(x = 100, y = 200) 
+
+        self.checkoutBtn = Button(self.app, text = "Checkout!", command = create,
+                                pady = 5, padx = 30)            #create drink button
+        self.checkoutBtn.place(x = 100, y = 250) 
+
+
+    def run(self):
+        self.app.mainloop()
+
+
+app = MainWindow()
+app.run()
+ 
+
+MainWindow.mainloop()
